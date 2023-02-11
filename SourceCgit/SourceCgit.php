@@ -249,7 +249,7 @@ class SourceCgitPlugin extends MantisSourceGitBasePlugin {
 	 */
 	public function commit_revision( $p_input ) {
 		/** @noinspection HtmlUnknownTarget */
-		$pattern = "#<tr><th>commit</th><td colspan='2' class='oid'><a href='/(.*?)/commit/\?id=([a-f0-9]*)'>([a-f0-9]*)</a>#";
+		$pattern = "#<tr><th>commit</th><td colspan='2' class='sha1'><a href='/(.*?)/commit/\?id=([a-f0-9]*)'>([a-f0-9]*)</a>#";
 		preg_match( $pattern, $p_input, $t_matches );
 		return $t_matches[2];
 	}
